@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sandwichería Eluney | Pedidos Online</title>
+
+  <meta name="description"
+    content="Disfrutá de lomitos, hamburguesas y sándwiches de milanesa. Hacé tu pedido online en Sandwichería Eluney.">
+
+  <link rel="stylesheet" href="estilos.css">
+
+  <!--
+    GOOGLE ANALYTICS 4
+    Cuando crees tu propiedad GA4, reemplaza G-XXXXXXXXXX
+    por tu ID de medición real.
+  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="contenedor navbar">
+      <div class="logo">🍔 ELUNEY</div>
+
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+      <div class="contenedor">
+        <h1>🍔 El sabor que te hace volver</h1>
+        <p>
+          Lomitos, hamburguesas y sándwiches preparados con todo el sabor.
+          ¡Hacé tu pedido y disfrutá!
+        </p>
+
+        <a href="#menu" class="boton" id="btn-ver-menu">
+          Ver menú 🍟
+        </a>
+      </div>
+    </section>
+
+
+    <!-- MENÚ -->
+    <section id="menu" class="seccion">
+      <div class="contenedor">
+        <h2>Nuestro menú 🍔</h2>
+        <p class="subtitulo">Elegí tu favorito</p>
+
+        <div class="productos">
+
+          <article class="producto">
+            <h3>Lomito Completo</h3>
+            <p>Carne, huevo, queso, jamón y verduras.</p>
+            <strong>$8.000</strong>
+            <button class="btn-producto" data-producto="Lomito Completo">
+              Me interesa
+            </button>
+          </article>
+
+          <article class="producto">
+            <h3>Sándwich de Milanesa</h3>
+            <p>Milanesa, verduras frescas y aderezos.</p>
+            <strong>$7.000</strong>
+            <button class="btn-producto" data-producto="Sandwich de Milanesa">
+              Me interesa
+            </button>
+          </article>
+
+          <article class="producto">
+            <h3>Hamburguesa Completa</h3>
+            <p>Carne, queso, huevo y verduras.</p>
+            <strong>$7.000</strong>
+            <button class="btn-producto" data-producto="Hamburguesa Completa">
+              Me interesa
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PROMOCIONES -->
+    <section id="promociones" class="seccion promociones">
+      <div class="contenedor">
+        <h2>🔥 Promoción especial</h2>
+
+        <div class="promo-card">
+          <h3>2 Sándwiches de Milanesa</h3>
+          <p class="precio-promo">$14.000</p>
+
+          <p>
+            Aprovechá nuestra promoción especial y compartí con quien quieras.
+          </p>
+
+          <button class="boton" id="btn-promocion">
+            Quiero esta promoción 🔥
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion">
+      <div class="contenedor">
+        <h2>Realizá tu pedido 📱</h2>
+
+        <p>
+          Contactanos por WhatsApp o dejá tus datos y nos comunicaremos con vos.
+        </p>
+
+        <!-- IMPORTANTE:
+             Reemplaza el número por el número real del negocio.
+        -->
+        <a
+          href="https://wa.me/5493880000000"
+          target="_blank"
+          class="boton whatsapp"
+          id="btn-whatsapp"
+        >
+          Pedir por WhatsApp 💬
+        </a>
+
+
+        <div class="formulario">
+          <h3>¿Querés recibir promociones?</h3>
+
+          <form id="form-contacto">
+
+            <input
+              type="text"
+              id="nombre"
+              placeholder="Tu nombre"
+              required
+            >
+
+            <input
+              type="email"
+              id="email"
+              placeholder="Tu correo electrónico"
+              required
+            >
+
+            <button type="submit" class="boton">
+              Enviar datos
+            </button>
+
+          </form>
+
+          <p id="mensaje"></p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="contenedor">
+      <p>© 2026 Sandwichería Eluney | Sitio web de prueba académica</p>
+      <p>Proyecto Integrador - Analítica Web</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
