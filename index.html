@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Eluney | Sándwiches y Lomitos</title>
     <meta name="description" content="Disfrutá los mejores lomitos, hamburguesas y sándwiches de Eluney.">
-
     <link rel="stylesheet" href="estilos.css">
 
-    <!-- GOOGLE ANALYTICS 4 -->
-    <!-- Reemplazá G-XXXXXXXXXX por tu ID de medición -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PKJVTNG6DW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -19,283 +15,165 @@
         gtag('config', 'G-PKJVTNG6DW');
     </script>
 </head>
-
 <body>
 
-    <!-- NAVEGACIÓN -->
-    <header class="header">
-        <nav class="navbar container">
+    <header>
+        <nav class="navbar contenedor">
             <a href="#inicio" class="logo">🍔 <span>ELUNEY</span></a>
-
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#menu">Menú</a>
                 <a href="#promo">Promos</a>
                 <a href="#contacto">Contacto</a>
             </div>
-
-            <a href="#menu" class="nav-button" id="btn-nav-menu">Ver menú</a>
+            <a href="#menu" class="boton btn-nav" id="btn-nav-menu">Ver menú</a>
         </nav>
     </header>
 
     <main>
-
-        <!-- PORTADA -->
         <section id="inicio" class="hero">
-            <div class="hero-overlay"></div>
-
-            <div class="container hero-content">
+            <div class="contenedor hero-content">
                 <div class="hero-text">
-                    <p class="tag">🔥 SABOR QUE TE CONQUISTA</p>
-
+                    <span class="tag">🔥 SABOR QUE TE CONQUISTA</span>
                     <h1>El mejor sabor, <span>en cada mordida.</span></h1>
-
-                    <p class="hero-description">
-                        Lomitos, hamburguesas y sándwiches preparados para disfrutar.
-                        Pedí fácil, rápido y desde donde estés.
-                    </p>
-
+                    <p>Lomitos, hamburguesas y sándwiches preparados para disfrutar. Pedí fácil, rápido y desde donde estés.</p>
                     <div class="hero-buttons">
-                        <a href="#menu" class="btn btn-primary" id="btn-ver-menu">
-                            🍔 Ver el menú
-                        </a>
-
-                        <a href="#contacto" class="btn btn-secondary" id="btn-pedir">
-                            📱 Hacer un pedido
-                        </a>
+                        <a href="#menu" class="boton" id="btn-ver-menu">🍔 Ver el menú</a>
+                        <a href="#contacto" class="boton btn-secundario" id="btn-pedir">📱 Hacer un pedido</a>
                     </div>
                 </div>
-
                 <div class="hero-card">
                     <div class="hero-card-icon">🍔</div>
-                    <p>HOY TE RECOMENDAMOS</p>
+                    <small>HOY TE RECOMENDAMOS</small>
                     <h3>Lomito Completo</h3>
-                    <span>Desde $8.000</span>
+                    <strong>Desde $8.000</strong>
                 </div>
             </div>
         </section>
 
-
-        <!-- BENEFICIOS -->
-        <section class="benefits">
-            <div class="container benefits-grid">
-
-                <div class="benefit">
-                    <div class="benefit-icon">⚡</div>
-                    <div>
-                        <h3>Rápido</h3>
-                        <p>Tu pedido preparado en poco tiempo.</p>
-                    </div>
-                </div>
-
-                <div class="benefit">
-                    <div class="benefit-icon">🥩</div>
-                    <div>
-                        <h3>Ingredientes frescos</h3>
-                        <p>Productos seleccionados para vos.</p>
-                    </div>
-                </div>
-
-                <div class="benefit">
-                    <div class="benefit-icon">❤️</div>
-                    <div>
-                        <h3>Hecho con pasión</h3>
-                        <p>El sabor que nos representa.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- MENÚ -->
-        <section id="menu" class="section menu-section">
-            <div class="container">
-
-                <div class="section-title">
-                    <p>🍟 NUESTRO MENÚ</p>
-                    <h2>Elegí tu favorito</h2>
-                    <span>Opciones preparadas para disfrutar en cualquier momento.</span>
-                </div>
-
-                <div class="products-grid">
-
-                    <article class="product-card">
-                        <div class="product-image food-1">🍔</div>
-
-                        <div class="product-content">
-                            <div class="product-title">
-                                <h3>Lomito Completo</h3>
-                                <span>$8.000</span>
-                            </div>
-
-                            <p>Carne, queso, jamón, huevo, verduras y aderezos.</p>
-
-                            <button class="product-button btn-producto"
-                                data-producto="Lomito Completo">
-                                Me interesa →
-                            </button>
-                        </div>
-                    </article>
-
-
-                    <article class="product-card">
-                        <div class="product-image food-2">🥪</div>
-
-                        <div class="product-content">
-                            <div class="product-title">
-                                <h3>Sándwich de Milanesa</h3>
-                                <span>$7.000</span>
-                            </div>
-
-                            <p>Milanesa, verduras frescas y los mejores aderezos.</p>
-
-                            <button class="product-button btn-producto"
-                                data-producto="Sandwich de Milanesa">
-                                Me interesa →
-                            </button>
-                        </div>
-                    </article>
-
-
-                    <article class="product-card">
-                        <div class="product-image food-3">🍔</div>
-
-                        <div class="product-content">
-                            <div class="product-title">
-                                <h3>Hamburguesa Completa</h3>
-                                <span>$7.000</span>
-                            </div>
-
-                            <p>Carne, queso, huevo y verduras frescas.</p>
-
-                            <button class="product-button btn-producto"
-                                data-producto="Hamburguesa Completa">
-                                Me interesa →
-                            </button>
-                        </div>
-                    </article>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- PROMOCIÓN -->
-        <section id="promo" class="promo-section">
-            <div class="container promo-container">
-
-                <div class="promo-text">
-                    <p class="tag">🔥 PROMOCIÓN ESPECIAL</p>
-                    <h2>Compartir sabe mejor.</h2>
-                    <p>
-                        Llevate dos deliciosos sándwiches de milanesa y disfrutá
-                        una comida increíble.
-                    </p>
-
-                    <button class="btn btn-primary" id="btn-promocion">
-                        Quiero esta promoción 🔥
-                    </button>
-                </div>
-
-                <div class="promo-price">
-                    <span>2 SÁNDWICHES</span>
-                    <strong>$14.000</strong>
-                    <small>Promoción por tiempo limitado</small>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ESTADÍSTICAS / CONFIANZA -->
-        <section class="stats">
-            <div class="container stats-grid">
-
+        <section class="beneficios contenedor">
+            <div class="benefit">
+                <span class="benefit-icon">⚡</span>
                 <div>
-                    <h3>🍔</h3>
-                    <strong>+500</strong>
-                    <span>Pedidos felices</span>
+                    <h3>Rápido</h3>
+                    <p>Tu pedido preparado en poco tiempo.</p>
                 </div>
-
+            </div>
+            <div class="benefit">
+                <span class="benefit-icon">🥩</span>
                 <div>
-                    <h3>⭐</h3>
-                    <strong>4.9</strong>
-                    <span>Valoración de clientes</span>
+                    <h3>Ingredientes frescos</h3>
+                    <p>Productos seleccionados para vos.</p>
                 </div>
-
+            </div>
+            <div class="benefit">
+                <span class="benefit-icon">❤️</span>
                 <div>
-                    <h3>❤️</h3>
-                    <strong>100%</strong>
-                    <span>Pasión por la comida</span>
+                    <h3>Hecho con pasión</h3>
+                    <p>El sabor que nos representa.</p>
                 </div>
-
             </div>
         </section>
 
+        <section id="menu" class="seccion contenedor">
+            <div class="seccion-titulo">
+                <p class="tag">🍟 NUESTRO MENÚ</p>
+                <h2>Elegí tu favorito</h2>
+                <p class="subtitulo">Opciones preparadas para disfrutar en cualquier momento.</p>
+            </div>
 
-        <!-- CONTACTO -->
-        <section id="contacto" class="section contact-section">
-            <div class="container contact-container">
+            <div class="productos">
+                <article class="producto">
+                    <div class="product-image">🍔</div>
+                    <div class="product-content">
+                        <h3>Lomito Completo</h3>
+                        <strong>$8.000</strong>
+                        <p>Carne, queso, jamón, huevo, verduras y aderezos.</p>
+                        <button class="btn-producto" data-producto="Lomito Completo">Me interesa →</button>
+                    </div>
+                </article>
 
+                <article class="producto">
+                    <div class="product-image">🥪</div>
+                    <div class="product-content">
+                        <h3>Sándwich de Milanesa</h3>
+                        <strong>$7.000</strong>
+                        <p>Milanesa, verduras frescas y los mejores aderezos.</p>
+                        <button class="btn-producto" data-producto="Sandwich de Milanesa">Me interesa →</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <div class="product-image">🍔</div>
+                    <div class="product-content">
+                        <h3>Hamburguesa Completa</h3>
+                        <strong>$7.000</strong>
+                        <p>Carne, queso, huevo y verduras frescas.</p>
+                        <button class="btn-producto" data-producto="Hamburguesa Completa">Me interesa →</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="promo" class="seccion promociones">
+            <div class="contenedor promo-card">
+                <span class="tag">🔥 PROMOCIÓN ESPECIAL</span>
+                <h2>Compartir sabe mejor.</h2>
+                <p>Llevate dos deliciosos sándwiches de milanesa y disfrutá una comida increíble.</p>
+                <div class="precio-promo">$14.000</div>
+                <button class="boton" id="btn-promocion">Quiero esta promoción 🔥</button>
+            </div>
+        </section>
+
+        <section class="stats contenedor">
+            <div>
+                <span class="stat-icon">🍔</span>
+                <strong>+500</strong>
+                <p>Pedidos felices</p>
+            </div>
+            <div>
+                <span class="stat-icon">⭐</span>
+                <strong>4.9</strong>
+                <p>Valoración de clientes</p>
+            </div>
+            <div>
+                <span class="stat-icon">❤️</span>
+                <strong>100%</strong>
+                <p>Pasión por la comida</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion contenedor">
+            <div class="contacto-grid">
                 <div class="contact-info">
-                    <p class="tag">📱 HACÉ TU PEDIDO</p>
+                    <span class="tag">📱 HACÉ TU PEDIDO</span>
                     <h2>¿Tenés hambre?</h2>
-                    <p>
-                        Elegí tu comida favorita y comunicate con nosotros.
-                        ¡Estamos listos para preparar tu pedido!
-                    </p>
-
-                    <!-- CAMBIÁ EL NÚMERO POR EL NÚMERO REAL -->
-                    <a href="https://wa.me/5493880000000"
-                       target="_blank"
-                       class="whatsapp-button"
-                       id="btn-whatsapp">
+                    <p>Elegí tu comida favorita y comunicate con nosotros. ¡Estamos listos para preparar tu pedido!</p>
+                    <a href="https://wa.me/5493880000000" target="_blank" rel="noopener" class="boton btn-whatsapp" id="btn-whatsapp">
                         💬 Pedir por WhatsApp
                     </a>
                 </div>
 
-
-                <!-- FORMULARIO -->
-                <div class="contact-form">
+                <div class="formulario">
                     <h3>Recibí nuestras promociones 🎁</h3>
                     <p>Dejanos tus datos para conocer nuestras novedades.</p>
-
                     <form id="form-contacto">
-
-                        <input type="text"
-                               id="nombre"
-                               placeholder="Tu nombre"
-                               required>
-
-                        <input type="email"
-                               id="email"
-                               placeholder="Tu correo electrónico"
-                               required>
-
-                        <button type="submit" class="btn btn-primary">
-                            Quiero recibir promociones
-                        </button>
+                        <input type="text" id="nombre" placeholder="Tu nombre" required>
+                        <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="boton">Quiero recibir promociones</button>
                     </form>
-
                     <p id="mensaje"></p>
                 </div>
-
             </div>
         </section>
-
     </main>
 
-
-    <!-- FOOTER -->
     <footer>
-        <div class="container footer-content">
+        <div class="contenedor footer-content">
             <div>
                 <h3>🍔 ELUNEY</h3>
                 <p>Comida rica, momentos felices.</p>
             </div>
-
             <div>
                 <p>© 2026 Sandwichería Eluney</p>
                 <small>Sitio web creado con fines académicos.</small>
@@ -303,8 +181,6 @@
         </div>
     </footer>
 
-
     <script src="script.js"></script>
-
 </body>
 </html>

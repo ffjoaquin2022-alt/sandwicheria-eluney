@@ -1,17 +1,21 @@
 // ========================================
-// EVENTO: VER MENÚ
+// EVENTO: VER MENÚ (Soporta múltiples botones)
 // ========================================
 
-document.getElementById("btn-ver-menu").addEventListener("click", function () {
+const botonesMenu = [document.getElementById("btn-ver-menu"), document.getElementById("btn-nav-menu")];
 
-  if (typeof gtag === "function") {
-    gtag("event", "view_menu", {
-      event_category: "interaccion",
-      event_label: "Boton Ver Menu"
+botonesMenu.forEach(function (btn) {
+  if (btn) {
+    btn.addEventListener("click", function () {
+      if (typeof gtag === "function") {
+        gtag("event", "view_menu", {
+          event_category: "interaccion",
+          event_label: "Boton Ver Menu"
+        });
+      }
+      console.log("Evento registrado: view_menu");
     });
   }
-
-  console.log("Evento registrado: view_menu");
 });
 
 
@@ -22,9 +26,7 @@ document.getElementById("btn-ver-menu").addEventListener("click", function () {
 const botonesProductos = document.querySelectorAll(".btn-producto");
 
 botonesProductos.forEach(function (boton) {
-
   boton.addEventListener("click", function () {
-
     const producto = boton.dataset.producto;
 
     if (typeof gtag === "function") {
@@ -34,10 +36,8 @@ botonesProductos.forEach(function (boton) {
     }
 
     alert("¡Excelente elección! Te interesa: " + producto);
-
     console.log("Producto seleccionado:", producto);
   });
-
 });
 
 
@@ -45,58 +45,65 @@ botonesProductos.forEach(function (boton) {
 // EVENTO: PROMOCIÓN
 // ========================================
 
-document.getElementById("btn-promocion").addEventListener("click", function () {
+const btnPromo = document.getElementById("btn-promocion");
 
-  if (typeof gtag === "function") {
-    gtag("event", "select_promotion", {
-      promotion_name: "2 Sandwiches de Milanesa"
-    });
-  }
+if (btnPromo) {
+  btnPromo.addEventListener("click", function () {
+    if (typeof gtag === "function") {
+      gtag("event", "select_promotion", {
+        promotion_name: "2 Sandwiches de Milanesa"
+      });
+    }
 
-  alert("¡Promoción seleccionada!");
-
-  console.log("Evento registrado: select_promotion");
-});
+    alert("¡Promoción seleccionada!");
+    console.log("Evento registrado: select_promotion");
+  });
+}
 
 
 // ========================================
 // EVENTO: CLIC EN WHATSAPP
 // ========================================
 
-document.getElementById("btn-whatsapp").addEventListener("click", function () {
+const btnWsp = document.getElementById("btn-whatsapp");
 
-  if (typeof gtag === "function") {
-    gtag("event", "contact_whatsapp", {
-      event_category: "conversion",
-      event_label: "Pedido por WhatsApp"
-    });
-  }
+if (btnWsp) {
+  btnWsp.addEventListener("click", function () {
+    if (typeof gtag === "function") {
+      gtag("event", "contact_whatsapp", {
+        event_category: "conversion",
+        event_label: "Pedido por WhatsApp"
+      });
+    }
 
-  console.log("Evento registrado: contact_whatsapp");
-});
+    console.log("Evento registrado: contact_whatsapp");
+  });
+}
 
 
 // ========================================
 // EVENTO: ENVÍO DEL FORMULARIO
 // ========================================
 
-document.getElementById("form-contacto").addEventListener("submit", function (event) {
+const formContacto = document.getElementById("form-contacto");
 
-  event.preventDefault();
+if (formContacto) {
+  formContacto.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  const nombre = document.getElementById("nombre").value;
+    const nombre = document.getElementById("nombre").value;
 
-  if (typeof gtag === "function") {
-    gtag("event", "generate_lead", {
-      event_category: "conversion",
-      event_label: "Formulario de contacto"
-    });
-  }
+    if (typeof gtag === "function") {
+      gtag("event", "generate_lead", {
+        event_category: "conversion",
+        event_label: "Formulario de contacto"
+      });
+    }
 
-  document.getElementById("mensaje").textContent =
-    "¡Gracias " + nombre + "! Recibimos tus datos correctamente.";
+    document.getElementById("mensaje").textContent =
+      "¡Gracias " + nombre + "! Recibimos tus datos correctamente.";
 
-  this.reset();
-
-  console.log("Evento registrado: generate_lead");
-});
+    this.reset();
+    console.log("Evento registrado: generate_lead");
+  });
+}
